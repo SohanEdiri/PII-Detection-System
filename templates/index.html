@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Progress Button</title>
+    <link rel="stylesheet" href="static/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+</head>
+<body>
+    <!-- Centered Heading -->
+    <h1 class="center-heading">PII DETECTION SYSTEM</h1>
+
+    <div class="upload-container">
+        <form id="uploadForm" action="{{ url_for('upload_file') }}" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" id="fileInput" class="custom-file-input" required>
+            <label for="fileInput" class="custom-file-label">Choose File</label>
+            <button type="submit" id="uploadButton" class="upload-button">Upload</button>
+        </form>
+    </div>
+
+    <div class="instructions-box">
+        <h2>Instructions:</h2>
+        <p>1. Click on "Choose File" to select the file you want to upload.</p>
+        <p>2. Once selected, click "Upload" to submit the file.</p>
+        <p>3. The system will process the file and identify any PII.</p>
+        <p>4. After processing, you will receive a notification with the results.</p>
+    </div>
+
+    <script>
+        document.getElementById('uploadForm').addEventListener('submit', function (event) {
+            let button = document.getElementById('uploadButton');
+
+
+            button.disabled = true;
+
+            gsap.to(button, {
+                duration: 2,
+                backgroundColor: '#2ecc71',
+                width: '200px',
+                ease: 'power1.inOut',
+                onComplete: function () {
+                    button.innerText = 'Uploaded';
+                }
+            });
+        });
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Sohan Edirisinghe. This project is done for my Computer Intelligence Assignment.</p>
+    </footer>
+</body>
+</html>

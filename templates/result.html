@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PII Detection Results</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+
+    <div class="results-container">
+        <h1>PII Detection Results</h1>
+        
+        <div class="result-box">
+            <h2>Original Text</h2>
+            <p class="original-text">{{ original }}</p>
+        </div>
+        
+        <div class="result-box">
+            <h2>PII Detected Text</h2>
+            <p class="processed-text">{{ processed | safe }}</p>
+        </div>
+        
+        <a href="{{ url_for('index') }}" class="back-button">Go back</a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Sohan Edirisinghe. This project is done for my Computer Intelligence Assignment.</p>
+    </footer>
+</body>
+</html>
