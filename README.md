@@ -50,3 +50,5 @@ This application uses the following libraries, which should be installed before 
 - Flask
 - Joblib
 - Werkzeug
+
+## Responsive Design
