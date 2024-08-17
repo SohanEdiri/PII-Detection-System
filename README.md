@@ -52,3 +52,7 @@ This application uses the following libraries, which should be installed before 
 - Werkzeug
 
 ## Responsive Design
+
+![Screenshot 2024-08-17 142712](https://github.com/user-attachments/assets/59b78097-629f-4d80-a8f1-4e96b2b28c7a)
+
+![Screenshot 2024-08-17 142725](https://github.com/user-attachments/assets/24311c94-000c-4d05-b6ba-a647a65be746)
